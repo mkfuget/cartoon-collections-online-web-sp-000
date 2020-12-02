@@ -13,7 +13,12 @@ def long_planeteer_calls(words)
   return words.map{ |x| x.length>4}.include?(true)
 end
 
-def find_the_cheese# code an argument here
-  # the array below is here to help
+def find_the_cheese(indgredients)
   cheese_types = ["cheddar", "gouda", "camembert"]
+  indgredients.each_with_index do |indgredient, i|
+    if(cheese_types.include?(i))
+      return i 
+    end
+  end
+  return nil
 end
